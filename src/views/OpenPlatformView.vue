@@ -1,6 +1,7 @@
 <template>
   <div class="open-platform-page">
     <div class="page-banner">
+    <div class="page-banner-grid"></div>
       <div class="container">
         <h1 class="page-title">开放平台</h1>
         <p class="page-desc">业财一账通 · 正在建设中</p>
@@ -79,10 +80,20 @@
 <style scoped>
 .page-banner {
   padding: 100px 0 60px;
-  background: linear-gradient(135deg, #2d1104 0%, #3d1706 100%);
+  background: linear-gradient(160deg, #1a0902 0%, #2d1104 40%, #3d1706 100%);
   text-align: center;
   position: relative;
   overflow: hidden;
+}
+
+.page-banner-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(234, 88, 12, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(234, 88, 12, 0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  z-index: 1;
 }
 
 .page-banner::before {
@@ -94,6 +105,7 @@
   height: 300px;
   background: radial-gradient(circle, rgba(234, 88, 12, 0.08) 0%, transparent 70%);
   border-radius: 50%;
+  z-index: 1;
 }
 
 .page-banner::after {
@@ -105,6 +117,7 @@
   height: 350px;
   background: radial-gradient(circle, rgba(249, 115, 22, 0.06) 0%, transparent 70%);
   border-radius: 50%;
+  z-index: 1;
 }
 
 .page-title {

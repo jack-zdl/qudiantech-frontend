@@ -2,6 +2,7 @@
   <div class="about-page">
     <!-- 横幅 -->
     <div class="page-banner">
+    <div class="page-banner-grid"></div>
       <div class="container">
         <h1 class="page-title">关于我们</h1>
         <p class="page-desc">了解上海趣电电子商务有限公司</p>
@@ -186,10 +187,20 @@ const cultureList = [
 <style scoped>
 .page-banner {
   padding: 100px 0 60px;
-  background: linear-gradient(135deg, #2d1104 0%, #3d1706 100%);
+  background: linear-gradient(160deg, #1a0902 0%, #2d1104 40%, #3d1706 100%);
   text-align: center;
   position: relative;
   overflow: hidden;
+}
+
+.page-banner-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(234, 88, 12, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(234, 88, 12, 0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  z-index: 1;
 }
 
 .page-banner::before {
@@ -199,8 +210,21 @@ const cultureList = [
   right: -20%;
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(234, 88, 12, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(234, 88, 12, 0.12) 0%, transparent 70%);
   border-radius: 50%;
+  z-index: 1;
+}
+
+.page-banner::after {
+  content: '';
+  position: absolute;
+  bottom: -40%;
+  left: -15%;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(249, 115, 22, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 1;
 }
 
 .page-title {
