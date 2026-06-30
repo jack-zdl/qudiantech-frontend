@@ -1,14 +1,14 @@
-/* ===== 趣电官网 全局样式 V7 - 石橙色主题 ===== */
+/* ===== 趣电官网 全局样式 V7 - 橙色主题 ===== */
 
 :root {
-  --primary: #c85a1e;
-  --primary-dark: #a34812;
-  --primary-light: #fff0e5;
-  --primary-gradient: linear-gradient(135deg, #c85a1e, #d97706);
-  --dark: #150a05;
+  --primary: #ea580c;
+  --primary-dark: #c2410c;
+  --primary-light: #fff7ed;
+  --primary-gradient: linear-gradient(135deg, #ea580c, #f97316);
+  --dark: #120a06;
   --text: #1f2937;
   --text-secondary: #6b7280;
-  --bg-light: #faf6f3;
+  --bg-light: #fffaf5;
   --border: #e2e8f0;
   --white: #ffffff;
   --danger: #ef4444;

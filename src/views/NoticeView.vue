@@ -159,7 +159,7 @@ onMounted(async () => {
   left: -10%;
   width: 300px;
   height: 300px;
-  background: radial-gradient(circle, rgba(200, 90, 30, 0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(234, 88, 12, 0.08) 0%, transparent 70%);
   border-radius: 50%;
 }
 
@@ -248,8 +248,8 @@ onMounted(async () => {
 }
 
 .tag-announce {
-  background: #fef3c7;
-  color: #d97706;
+  background: #fff7ed;
+  color: #ea580c;
 }
 
 .tag-recruit {

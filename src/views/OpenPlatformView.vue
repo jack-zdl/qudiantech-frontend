@@ -79,7 +79,7 @@
 <style scoped>
 .page-banner {
   padding: 100px 0 60px;
-  background: linear-gradient(135deg, var(--dark) 0%, #1a1a2e 100%);
+  background: linear-gradient(135deg, var(--dark) 0%, #1f0f08 100%);
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -92,7 +92,7 @@
   left: -10%;
   width: 300px;
   height: 300px;
-  background: radial-gradient(circle, rgba(200, 90, 30, 0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(234, 88, 12, 0.08) 0%, transparent 70%);
   border-radius: 50%;
 }
 
@@ -103,7 +103,7 @@
   right: -15%;
   width: 350px;
   height: 350px;
-  background: radial-gradient(circle, rgba(217, 119, 6, 0.06) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(249, 115, 22, 0.06) 0%, transparent 70%);
   border-radius: 50%;
 }
 
@@ -284,7 +284,7 @@
 }
 
 .build-actions .btn-primary:hover {
-  box-shadow: 0 6px 20px rgba(200, 90, 30, 0.3);
+  box-shadow: 0 6px 20px rgba(234, 88, 12, 0.3);
 }
 
 .build-actions .btn-outline {

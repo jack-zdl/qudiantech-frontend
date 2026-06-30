@@ -86,7 +86,7 @@ const offices = [
   right: -20%;
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(200, 90, 30, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(234, 88, 12, 0.1) 0%, transparent 70%);
   border-radius: 50%;
 }
 

@@ -68,7 +68,7 @@
   height: 550px;
   top: -20%;
   left: -10%;
-  background: radial-gradient(circle, rgba(200, 90, 30, 0.15) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(234, 88, 12, 0.15) 0%, transparent 70%);
 }
 
 .hero-glow-2 {
@@ -76,13 +76,13 @@
   height: 450px;
   bottom: -20%;
   right: -10%;
-  background: radial-gradient(circle, rgba(217, 119, 6, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(249, 115, 22, 0.1) 0%, transparent 70%);
 }
 
 .hero-float-circle {
   position: absolute;
   border-radius: 50%;
-  border: 1px solid rgba(200, 90, 30, 0.1);
+  border: 1px solid rgba(234, 88, 12, 0.1);
   pointer-events: none;
   z-index: 1;
   animation: float 8s ease-in-out infinite;
@@ -102,7 +102,7 @@
   top: 58%;
   right: 20%;
   animation-delay: 2s;
-  border-color: rgba(217, 119, 6, 0.08);
+  border-color: rgba(249, 115, 22, 0.08);
 }
 
 .hero-float-3 {
@@ -145,7 +145,7 @@
 }
 
 .hero-gradient-text {
-  background: linear-gradient(135deg, #c85a1e 0%, #d97706 100%);
+  background: linear-gradient(135deg, #ea580c 0%, #f97316 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -180,13 +180,13 @@
 }
 
 .label-consumer {
-  background: rgba(200, 90, 30, 0.15);
-  color: #c85a1e;
+  background: rgba(234, 88, 12, 0.15);
+  color: #ea580c;
 }
 
 .label-client {
-  background: rgba(217, 119, 6, 0.15);
-  color: #d97706;
+  background: rgba(249, 115, 22, 0.15);
+  color: #f97316;
 }
 
 .label-employee {
@@ -212,7 +212,7 @@
   align-items: center;
   justify-content: center;
   background: var(--primary-gradient);
-  box-shadow: 0 4px 24px rgba(200, 90, 30, 0.3);
+  box-shadow: 0 4px 24px rgba(234, 88, 12, 0.3);
   padding: 13px 36px;
   border-radius: 8px;
   font-size: 16px;
@@ -225,7 +225,7 @@
 }
 
 .btn-primary:hover {
-  box-shadow: 0 6px 32px rgba(200, 90, 30, 0.45);
+  box-shadow: 0 6px 32px rgba(234, 88, 12, 0.45);
 }
 
 .btn-outline {
@@ -247,7 +247,7 @@
 .btn-outline:hover {
   border-color: var(--primary);
   color: var(--primary);
-  background: rgba(200, 90, 30, 0.08);
+  background: rgba(234, 88, 12, 0.08);
 }
 
 @media (max-width: 768px) {
