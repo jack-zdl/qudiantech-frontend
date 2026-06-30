@@ -12,17 +12,18 @@
         <span class="hero-gradient-text">让美好生活</span><br />
         <span>触手可及</span>
       </h1>
-      <div class="mission-section">
-        <span class="mission-badge">公司使命</span>
-        <div class="mission-items">
-          <div class="mission-row">
-            <span class="mission-label label-consumer">消费者</span>
-            <span class="mission-text">给消费者提供优质的产品及服务，让美好生活触手可及</span>
-          </div>
-          <div class="mission-row">
-            <span class="mission-label label-client">客户</span>
-            <span class="mission-text">助力商业成功，发现更多可能</span>
-          </div>
+      <div class="mission-items">
+        <div class="mission-row">
+          <span class="mission-label label-consumer">消费者</span>
+          <span class="mission-text">给消费者提供优质的产品及服务，让美好生活触手可及</span>
+        </div>
+        <div class="mission-row">
+          <span class="mission-label label-client">客户</span>
+          <span class="mission-text">助力商业成功，发现更多可能</span>
+        </div>
+        <div class="mission-row">
+          <span class="mission-label label-employee">员工</span>
+          <span class="mission-text">让员工能够快乐、体面地生活</span>
         </div>
       </div>
       <div class="hero-actions">
@@ -151,26 +152,12 @@
 }
 
 /* ===== 使命区 ===== */
-.mission-section {
-  margin-bottom: 32px;
-}
-
-.mission-badge {
-  display: inline-block;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.3);
-  margin-bottom: 12px;
-  padding: 0 12px;
-}
-
 .mission-items {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  margin-bottom: 32px;
 }
 
 .mission-row {
@@ -202,6 +189,11 @@
   color: #f97316;
 }
 
+.label-employee {
+  background: rgba(59, 130, 246, 0.15);
+  color: #60a5fa;
+}
+
 .mission-text {
   font-size: 15px;
   color: rgba(255, 255, 255, 0.6);
@@ -216,6 +208,9 @@
 }
 
 .btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: var(--primary-gradient);
   box-shadow: 0 4px 20px rgba(225, 29, 72, 0.3);
   padding: 12px 32px;
@@ -234,6 +229,9 @@
 }
 
 .btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: transparent;
   color: #fff;
   border: 2px solid rgba(255, 255, 255, 0.2);
