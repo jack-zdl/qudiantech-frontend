@@ -45,11 +45,11 @@
 
 <script setup lang="ts">
 const stats = [
-  { number: '300', label: '团队规模' },
-  { number: '5亿', label: '年营收' },
+  { number: '100', label: '团队规模' },
+  { number: '4-5亿', label: '年营收' },
   { number: '6', label: '分支机构' },
-  { number: '5', label: '覆盖国家' },
-  { number: '1000', label: '合作品牌' },
+  { number: '3', label: '覆盖国家' },
+  { number: '500', label: '合作品牌' },
 ]
 
 const cards = [

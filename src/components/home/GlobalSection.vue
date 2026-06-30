@@ -67,12 +67,12 @@
 
 <script setup lang="ts">
 const markets = [
-  { flag: '🇨🇳', region: '上海总部', desc: '浦东新区张江高科技园区' },
-  { flag: '🇨🇳', region: '深圳分公司', desc: '南山区科技园' },
-  { flag: '🇨🇳', region: '安徽分部', desc: '合肥市高新区' },
-  { flag: '🇭🇰', region: '香港办事处', desc: '九龙尖沙咀' },
+  { flag: '🇨🇳', region: '上海总部', desc: '上海市长宁区通协路 268 号' },
+  { flag: '🇨🇳', region: '深圳分公司', desc: '深圳市南山区科技园' },
+  { flag: '🇨🇳', region: '安徽分部', desc: '安徽省合肥市高新区' },
+  { flag: '🇨🇳', region: '山西分部', desc: '山西省太原市' },
+  { flag: '🇭🇰', region: '香港办事处', desc: '香港九龙尖沙咀' },
   { flag: '🇷🇺', region: '俄罗斯办事处', desc: '莫斯科' },
-  { flag: '🇸🇬', region: '东南亚办事处', desc: '新加坡' },
 ]
 </script>
 

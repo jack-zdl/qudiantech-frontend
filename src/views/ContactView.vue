@@ -41,25 +41,9 @@
               <div class="map-inner">
                 <span class="map-icon">📍</span>
                 <p class="map-title">上海总部</p>
-                <p class="map-addr">上海市浦东新区张江高科技园区</p>
+                <p class="map-addr">上海市长宁区通协路 268 号尚品都汇 B807 室</p>
                 <p class="map-hint">地图组件即将接入</p>
               </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 核心团队 -->
-        <div class="team-section">
-          <h2 class="section-title">核心团队</h2>
-          <p class="section-subtitle">专业的团队，为您提供优质服务</p>
-          <div class="team-grid">
-            <div v-for="t in team" :key="t.name" class="team-card">
-              <div class="team-avatar-wrap">
-                <span class="team-avatar">{{ t.icon }}</span>
-              </div>
-              <h3 class="team-name">{{ t.name }}</h3>
-              <span class="team-role">{{ t.role }}</span>
-              <p class="team-desc">{{ t.desc }}</p>
             </div>
           </div>
         </div>
@@ -77,16 +61,12 @@ const contacts = [
 ]
 
 const offices = [
-  { name: '上海总部', address: '上海市浦东新区张江高科技园区' },
+  { name: '上海总部', address: '上海市长宁区通协路 268 号尚品都汇 B807 室' },
   { name: '深圳分公司', address: '深圳市南山区科技园' },
   { name: '安徽分部', address: '安徽省合肥市高新区' },
+  { name: '山西分部', address: '山西省太原市' },
   { name: '香港办事处', address: '香港九龙尖沙咀' },
-]
-
-const team = [
-  { icon: '👤', name: '张先生', role: '创始人 & CEO', desc: '10+年电商行业经验' },
-  { icon: '👤', name: '李先生', role: '运营总裁', desc: '前阿里资深运营专家' },
-  { icon: '👤', name: '王女士', role: '技术总监', desc: '全栈技术架构专家' },
+  { name: '俄罗斯办事处', address: '莫斯科' },
 ]
 </script>
 
@@ -127,7 +107,8 @@ const team = [
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
-  margin-bottom: 60px;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 .contact-info-col {
@@ -270,75 +251,8 @@ const team = [
   color: #94a3b8;
 }
 
-/* 团队 */
-.team-section {
-  padding-top: 40px;
-  border-top: 1px solid var(--border);
-}
-
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.team-card {
-  padding: 28px;
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  text-align: center;
-  transition: all 0.2s;
-}
-
-.team-card:hover {
-  border-color: var(--primary);
-  box-shadow: var(--shadow);
-  transform: translateY(-2px);
-}
-
-.team-avatar-wrap {
-  width: 72px;
-  height: 72px;
-  background: var(--primary-light);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 16px;
-}
-
-.team-avatar {
-  font-size: 32px;
-}
-
-.team-name {
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--text);
-  margin-bottom: 4px;
-}
-
-.team-role {
-  font-size: 13px;
-  color: var(--primary);
-  font-weight: 500;
-  display: block;
-  margin-bottom: 8px;
-}
-
-.team-desc {
-  font-size: 13px;
-  color: var(--text-secondary);
-}
-
 @media (max-width: 768px) {
   .contact-two-col {
-    grid-template-columns: 1fr;
-  }
-  .team-grid {
     grid-template-columns: 1fr;
   }
 }
