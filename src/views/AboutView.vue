@@ -186,7 +186,7 @@ const cultureList = [
 <style scoped>
 .page-banner {
   padding: 100px 0 60px;
-  background: linear-gradient(135deg, var(--dark) 0%, #4a200a 100%);
+  background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
   text-align: center;
   position: relative;
   overflow: hidden;

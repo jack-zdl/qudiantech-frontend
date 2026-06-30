@@ -53,7 +53,7 @@ function handleLogout() {
 
 .admin-sidebar {
   width: 220px;
-  background: var(--dark);
+  background: linear-gradient(180deg, #431b06, #2d1104);
   color: var(--white);
   display: flex;
   flex-direction: column;

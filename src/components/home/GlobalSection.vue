@@ -322,7 +322,7 @@ onUnmounted(() => {
 
 <style scoped>
 .global {
-  background: var(--dark);
+  background: var(--bg-warm);
   color: var(--white);
   position: relative;
   overflow: hidden;
@@ -335,7 +335,7 @@ onUnmounted(() => {
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(ellipse at 50% 40%, rgba(234, 88, 12, 0.04) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 50% 40%, rgba(234, 88, 12, 0.06) 0%, transparent 60%);
   pointer-events: none;
 }
 

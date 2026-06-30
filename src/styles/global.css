@@ -1,20 +1,20 @@
-/* ===== 趣电官网 全局样式 V7 - 橙色主题 ===== */
+/* ===== 趣电官网 全局样式 V7 - 浅橙色主题 ===== */
 
 :root {
   --primary: #ea580c;
   --primary-dark: #c2410c;
-  --primary-light: #fff7ed;
+  --primary-light: #fff5eb;
   --primary-gradient: linear-gradient(135deg, #ea580c, #f97316);
-  --dark: #3d1706;
-  --dark-2: #4a200a;
+  --bg-warm: #fffaf0;
+  --bg-orange-light: #fff7ed;
+  --bg-orange: #ffedd5;
   --text: #1f2937;
   --text-secondary: #6b7280;
-  --bg-light: #fffaf5;
-  --border: #e2e8f0;
+  --border: #fed7aa;
   --white: #ffffff;
   --danger: #ef4444;
-  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
 }
 
 * {
@@ -97,8 +97,8 @@ img {
 
 .btn-outline {
   background: transparent;
-  color: var(--white);
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: var(--text);
+  border: 2px solid var(--border);
 }
 
 .btn-outline:hover {
