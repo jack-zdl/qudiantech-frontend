@@ -74,12 +74,12 @@ function getChartOption() {
       },
       itemStyle: {
         areaColor: 'rgba(255,255,255,0.04)',
-        borderColor: 'rgba(225,29,72,0.15)',
+        borderColor: 'rgba(200,90,30,0.2)',
         borderWidth: 1.2,
       },
       emphasis: {
         itemStyle: {
-          areaColor: 'rgba(225,29,72,0.08)',
+          areaColor: 'rgba(200,90,30,0.1)',
         },
         label: {
           color: 'rgba(255,255,255,0.5)',
@@ -94,7 +94,7 @@ function getChartOption() {
         data: routes.slice(0, 4).map((r) => ({
           coords: r.coords,
           lineStyle: {
-            color: 'rgba(225,29,72,0.2)',
+            color: 'rgba(200,90,30,0.2)',
             width: 1,
             curveness: 0.2,
             type: 'dashed' as const,
@@ -121,8 +121,8 @@ function getChartOption() {
                 type: 'linear' as const,
                 x: 0, y: 0, x2: 1, y2: 0,
                 colorStops: [
-                  { offset: 0, color: 'rgba(249,115,22,0.5)' },
-                  { offset: 1, color: 'rgba(225,29,72,0.8)' },
+                  { offset: 0, color: 'rgba(217,119,6,0.5)' },
+                  { offset: 1, color: 'rgba(200,90,30,0.8)' },
                 ],
               },
               width: 2,
@@ -140,7 +140,7 @@ function getChartOption() {
           trailLength: 0.3,
           symbol: 'arrow',
           symbolSize: 8,
-          color: '#e11d48',
+          color: '#c85a1e',
         },
         z: 2,
       },
@@ -154,10 +154,10 @@ function getChartOption() {
           symbolSize: c.symbolSize + 12,
           itemStyle: {
             color: c.name === '上海总部'
-              ? 'rgba(225,29,72,0.15)'
+              ? 'rgba(200,90,30,0.15)'
               : c.name === '俄罗斯'
-                ? 'rgba(225,29,72,0.12)'
-                : 'rgba(249,115,22,0.1)',
+                ? 'rgba(200,90,30,0.12)'
+                : 'rgba(217,119,6,0.1)',
           },
         })),
         symbol: 'circle',
@@ -173,7 +173,7 @@ function getChartOption() {
             name: '上海总部',
             value: [121.47, 31.23],
             symbolSize: 18,
-            itemStyle: { color: '#e11d48' },
+            itemStyle: { color: '#c85a1e' },
             label: {
               show: true,
               formatter: '{b}',
@@ -188,7 +188,7 @@ function getChartOption() {
             name: '深圳',
             value: [114.06, 22.54],
             symbolSize: 12,
-            itemStyle: { color: '#f97316' },
+            itemStyle: { color: '#d97706' },
             label: {
               show: true,
               formatter: '{b}',
@@ -203,7 +203,7 @@ function getChartOption() {
             name: '安徽',
             value: [117.23, 31.82],
             symbolSize: 12,
-            itemStyle: { color: '#f97316' },
+            itemStyle: { color: '#d97706' },
             label: {
               show: true,
               formatter: '{b}',
@@ -218,7 +218,7 @@ function getChartOption() {
             name: '山西',
             value: [112.55, 37.87],
             symbolSize: 12,
-            itemStyle: { color: '#f97316' },
+            itemStyle: { color: '#d97706' },
             label: {
               show: true,
               formatter: '{b}',
@@ -233,7 +233,7 @@ function getChartOption() {
             name: '香港',
             value: [114.17, 22.32],
             symbolSize: 12,
-            itemStyle: { color: '#f97316' },
+            itemStyle: { color: '#d97706' },
             label: {
               show: true,
               formatter: '{b}',
@@ -248,7 +248,7 @@ function getChartOption() {
             name: '俄罗斯',
             value: [37.62, 55.76],
             symbolSize: 12,
-            itemStyle: { color: '#e11d48' },
+            itemStyle: { color: '#c85a1e' },
             label: {
               show: true,
               formatter: '{b}',
@@ -277,7 +277,7 @@ function getChartOption() {
             name: '上海总部',
             value: [121.47, 31.23],
             symbolSize: 30,
-            itemStyle: { color: 'rgba(225,29,72,0.08)' },
+            itemStyle: { color: 'rgba(200,90,30,0.08)' },
           },
         ],
         symbol: 'circle',
@@ -335,7 +335,7 @@ onUnmounted(() => {
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(ellipse at 50% 40%, rgba(225, 29, 72, 0.04) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 50% 40%, rgba(200, 90, 30, 0.04) 0%, transparent 60%);
   pointer-events: none;
 }
 
@@ -389,8 +389,8 @@ onUnmounted(() => {
 }
 
 .market-card:hover {
-  background: rgba(225, 29, 72, 0.08);
-  border-color: rgba(225, 29, 72, 0.2);
+  background: rgba(200, 90, 30, 0.08);
+  border-color: rgba(200, 90, 30, 0.2);
   transform: translateY(-2px);
 }
 

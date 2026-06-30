@@ -40,7 +40,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(160deg, #0b1020 0%, #131b30 40%, #1a1f3a 100%);
+  background: linear-gradient(160deg, #120804 0%, #1a0e08 40%, #221008 100%);
   position: relative;
   overflow: hidden;
 }
@@ -49,8 +49,8 @@
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
   background-size: 60px 60px;
   z-index: 1;
 }
@@ -58,94 +58,94 @@
 .hero-glow {
   position: absolute;
   border-radius: 50%;
-  filter: blur(100px);
+  filter: blur(120px);
   pointer-events: none;
   z-index: 1;
 }
 
 .hero-glow-1 {
-  width: 500px;
-  height: 500px;
-  top: -15%;
-  left: -8%;
-  background: radial-gradient(circle, rgba(225, 29, 72, 0.18) 0%, transparent 70%);
+  width: 550px;
+  height: 550px;
+  top: -20%;
+  left: -10%;
+  background: radial-gradient(circle, rgba(200, 90, 30, 0.15) 0%, transparent 70%);
 }
 
 .hero-glow-2 {
-  width: 400px;
-  height: 400px;
+  width: 450px;
+  height: 450px;
   bottom: -20%;
-  right: -8%;
-  background: radial-gradient(circle, rgba(249, 115, 22, 0.12) 0%, transparent 70%);
+  right: -10%;
+  background: radial-gradient(circle, rgba(217, 119, 6, 0.1) 0%, transparent 70%);
 }
 
 .hero-float-circle {
   position: absolute;
   border-radius: 50%;
-  border: 1px solid rgba(225, 29, 72, 0.12);
+  border: 1px solid rgba(200, 90, 30, 0.1);
   pointer-events: none;
   z-index: 1;
   animation: float 8s ease-in-out infinite;
 }
 
 .hero-float-1 {
-  width: 180px;
-  height: 180px;
-  top: 18%;
-  right: 12%;
+  width: 200px;
+  height: 200px;
+  top: 15%;
+  right: 15%;
   animation-delay: 0s;
 }
 
 .hero-float-2 {
-  width: 100px;
-  height: 100px;
-  top: 55%;
-  right: 22%;
+  width: 120px;
+  height: 120px;
+  top: 58%;
+  right: 20%;
   animation-delay: 2s;
-  border-color: rgba(249, 115, 22, 0.1);
+  border-color: rgba(217, 119, 6, 0.08);
 }
 
 .hero-float-3 {
-  width: 60px;
-  height: 60px;
-  top: 30%;
-  left: 8%;
+  width: 70px;
+  height: 70px;
+  top: 32%;
+  left: 10%;
   animation-delay: 4s;
 }
 
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-16px); }
+  50% { transform: translateY(-18px); }
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
   text-align: center;
-  padding: 80px 0 60px;
+  padding: 100px 0 70px;
 }
 
 .hero-badge {
   display: inline-block;
-  padding: 6px 16px;
+  padding: 6px 18px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.5);
-  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.45);
+  margin-bottom: 28px;
   letter-spacing: 0.5px;
 }
 
 .hero-title {
-  font-size: 56px;
+  font-size: 58px;
   font-weight: 800;
-  line-height: 1.15;
+  line-height: 1.2;
   color: var(--white);
-  margin-bottom: 28px;
+  margin-bottom: 36px;
 }
 
 .hero-gradient-text {
-  background: linear-gradient(135deg, #e11d48 0%, #f97316 100%);
+  background: linear-gradient(135deg, #c85a1e 0%, #d97706 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -156,8 +156,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 32px;
+  gap: 14px;
+  margin-bottom: 40px;
 }
 
 .mission-row {
@@ -171,39 +171,39 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 2px 10px;
+  padding: 2px 12px;
   border-radius: 4px;
   font-size: 12px;
   font-weight: 700;
-  margin-right: 12px;
+  margin-right: 14px;
   flex-shrink: 0;
 }
 
 .label-consumer {
-  background: rgba(225, 29, 72, 0.15);
-  color: #e11d48;
+  background: rgba(200, 90, 30, 0.15);
+  color: #c85a1e;
 }
 
 .label-client {
-  background: rgba(249, 115, 22, 0.15);
-  color: #f97316;
+  background: rgba(217, 119, 6, 0.15);
+  color: #d97706;
 }
 
 .label-employee {
-  background: rgba(59, 130, 246, 0.15);
+  background: rgba(96, 165, 250, 0.15);
   color: #60a5fa;
 }
 
 .mission-text {
   font-size: 15px;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.55);
   font-weight: 400;
   letter-spacing: 0.3px;
 }
 
 .hero-actions {
   display: flex;
-  gap: 16px;
+  gap: 20px;
   justify-content: center;
 }
 
@@ -212,8 +212,8 @@
   align-items: center;
   justify-content: center;
   background: var(--primary-gradient);
-  box-shadow: 0 4px 20px rgba(225, 29, 72, 0.3);
-  padding: 12px 32px;
+  box-shadow: 0 4px 24px rgba(200, 90, 30, 0.3);
+  padding: 13px 36px;
   border-radius: 8px;
   font-size: 16px;
   font-weight: 600;
@@ -225,7 +225,7 @@
 }
 
 .btn-primary:hover {
-  box-shadow: 0 6px 28px rgba(225, 29, 72, 0.45);
+  box-shadow: 0 6px 32px rgba(200, 90, 30, 0.45);
 }
 
 .btn-outline {
@@ -235,7 +235,7 @@
   background: transparent;
   color: #fff;
   border: 2px solid rgba(255, 255, 255, 0.2);
-  padding: 12px 32px;
+  padding: 13px 36px;
   border-radius: 8px;
   font-size: 16px;
   font-weight: 600;
@@ -247,7 +247,7 @@
 .btn-outline:hover {
   border-color: var(--primary);
   color: var(--primary);
-  background: rgba(225, 29, 72, 0.08);
+  background: rgba(200, 90, 30, 0.08);
 }
 
 @media (max-width: 768px) {
@@ -266,7 +266,7 @@
     height: 80px;
   }
   .hero-content {
-    padding: 60px 0 40px;
+    padding: 70px 0 40px;
   }
   .mission-row {
     flex-direction: column;
