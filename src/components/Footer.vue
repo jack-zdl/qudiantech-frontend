@@ -17,11 +17,11 @@
         <router-link to="/about">企业文化</router-link>
       </div>
       <div class="footer-col">
-        <h4>业务合作</h4>
-        <router-link to="/shop">平台商城</router-link>
-        <router-link to="/contact">商务合作</router-link>
-        <router-link to="/contact">跨境业务</router-link>
-        <router-link to="/contact">供应链合作</router-link>
+        <h4>开放平台</h4>
+        <router-link to="/open-platform">业财一账通</router-link>
+        <a href="http://8.160.167.158:8005" target="_blank" rel="noopener noreferrer">禅道 ↗</a>
+        <a href="https://www.yuque.com/jiaotashidi-b59wx/vk9hg2" target="_blank" rel="noopener noreferrer">开放文档 ↗</a>
+        <a href="http://8.160.167.158:18789" target="_blank" rel="noopener noreferrer">AI 数字员工 ↗</a>
       </div>
       <div class="footer-col">
         <h4>联系我们</h4>
