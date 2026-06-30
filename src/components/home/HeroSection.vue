@@ -12,10 +12,19 @@
         <span class="hero-gradient-text">让美好生活</span><br />
         <span>触手可及</span>
       </h1>
-      <p class="hero-subtitle">
-        一站式电商运营与数字化服务解决方案<br />
-        助力企业快速开拓市场
-      </p>
+      <div class="mission-section">
+        <span class="mission-badge">公司使命</span>
+        <div class="mission-items">
+          <div class="mission-row">
+            <span class="mission-label label-consumer">消费者</span>
+            <span class="mission-text">给消费者提供优质的产品及服务，让美好生活触手可及</span>
+          </div>
+          <div class="mission-row">
+            <span class="mission-label label-client">客户</span>
+            <span class="mission-text">助力商业成功，发现更多可能</span>
+          </div>
+        </div>
+      </div>
       <div class="hero-actions">
         <router-link to="/about" class="btn btn-primary">了解我们</router-link>
         <router-link to="/contact" class="btn btn-outline">合作咨询</router-link>
@@ -131,7 +140,7 @@
   font-weight: 800;
   line-height: 1.15;
   color: var(--white);
-  margin-bottom: 16px;
+  margin-bottom: 28px;
 }
 
 .hero-gradient-text {
@@ -141,12 +150,63 @@
   background-clip: text;
 }
 
-.hero-subtitle {
-  font-size: 17px;
-  color: rgba(255, 255, 255, 0.45);
-  max-width: 480px;
-  margin: 0 auto 32px;
-  line-height: 1.8;
+/* ===== 使命区 ===== */
+.mission-section {
+  margin-bottom: 32px;
+}
+
+.mission-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.3);
+  margin-bottom: 12px;
+  padding: 0 12px;
+}
+
+.mission-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.mission-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0;
+  line-height: 1.6;
+}
+
+.mission-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.label-consumer {
+  background: rgba(225, 29, 72, 0.15);
+  color: #e11d48;
+}
+
+.label-client {
+  background: rgba(249, 115, 22, 0.15);
+  color: #f97316;
+}
+
+.mission-text {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+  letter-spacing: 0.3px;
 }
 
 .hero-actions {
@@ -155,20 +215,38 @@
   justify-content: center;
 }
 
-.hero-actions .btn-primary {
+.btn-primary {
   background: var(--primary-gradient);
   box-shadow: 0 4px 20px rgba(225, 29, 72, 0.3);
+  padding: 12px 32px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+  color: #fff;
+  text-decoration: none;
 }
 
-.hero-actions .btn-primary:hover {
+.btn-primary:hover {
   box-shadow: 0 6px 28px rgba(225, 29, 72, 0.45);
 }
 
-.hero-actions .btn-outline {
-  border-color: rgba(255, 255, 255, 0.2);
+.btn-outline {
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  padding: 12px 32px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
 }
 
-.hero-actions .btn-outline:hover {
+.btn-outline:hover {
   border-color: var(--primary);
   color: var(--primary);
   background: rgba(225, 29, 72, 0.08);
@@ -191,6 +269,18 @@
   }
   .hero-content {
     padding: 60px 0 40px;
+  }
+  .mission-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 4px;
+  }
+  .mission-label {
+    margin-right: 0;
+  }
+  .mission-text {
+    font-size: 14px;
   }
 }
 </style>
