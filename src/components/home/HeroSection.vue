@@ -122,7 +122,7 @@
   position: relative;
   z-index: 2;
   text-align: center;
-  padding: 100px 0 70px;
+  padding: 120px 0 85px;
 }
 
 .hero-badge {
@@ -132,16 +132,16 @@
   border-radius: 20px;
   font-size: 13px;
   color: rgba(255, 255, 255, 0.45);
-  margin-bottom: 28px;
+  margin-bottom: 36px;
   letter-spacing: 0.5px;
 }
 
 .hero-title {
   font-size: 58px;
   font-weight: 800;
-  line-height: 1.2;
+  line-height: 1.25;
   color: var(--white);
-  margin-bottom: 36px;
+  margin-bottom: 48px;
 }
 
 .hero-gradient-text {
@@ -156,15 +156,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 14px;
-  margin-bottom: 40px;
+  gap: 20px;
+  margin-bottom: 50px;
 }
 
 .mission-row {
   display: flex;
   align-items: baseline;
   gap: 0;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .mission-label {
@@ -203,7 +203,7 @@
 
 .hero-actions {
   display: flex;
-  gap: 20px;
+  gap: 28px;
   justify-content: center;
 }
 
@@ -266,7 +266,7 @@
     height: 80px;
   }
   .hero-content {
-    padding: 70px 0 40px;
+    padding: 80px 0 40px;
   }
   .mission-row {
     flex-direction: column;
