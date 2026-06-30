@@ -40,7 +40,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(160deg, #120804 0%, #1a0e08 40%, #221008 100%);
+  background: linear-gradient(160deg, #2a1004 0%, #3d1706 40%, #4a200a 100%);
   position: relative;
   overflow: hidden;
 }

@@ -73,7 +73,7 @@ const offices = [
 <style scoped>
 .page-banner {
   padding: 100px 0 60px;
-  background: linear-gradient(135deg, var(--dark) 0%, #1f0f08 100%);
+  background: linear-gradient(135deg, var(--dark) 0%, #4a200a 100%);
   text-align: center;
   position: relative;
   overflow: hidden;
