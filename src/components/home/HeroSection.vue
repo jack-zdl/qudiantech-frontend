@@ -40,7 +40,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(160deg, #fff7ed 0%, #ffedd5 40%, #fef3c7 100%);
+  background: linear-gradient(160deg, #1a0902 0%, #2d1104 40%, #3d1706 100%);
   position: relative;
   overflow: hidden;
 }
@@ -49,8 +49,8 @@
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(234, 88, 12, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(234, 88, 12, 0.04) 1px, transparent 1px);
+    linear-gradient(rgba(234, 88, 12, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(234, 88, 12, 0.05) 1px, transparent 1px);
   background-size: 60px 60px;
   z-index: 1;
 }
@@ -64,25 +64,25 @@
 }
 
 .hero-glow-1 {
-  width: 500px;
-  height: 500px;
-  top: -15%;
+  width: 550px;
+  height: 550px;
+  top: -20%;
   left: -10%;
-  background: radial-gradient(circle, rgba(234, 88, 12, 0.06) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(234, 88, 12, 0.2) 0%, transparent 70%);
 }
 
 .hero-glow-2 {
-  width: 400px;
-  height: 400px;
+  width: 450px;
+  height: 450px;
   bottom: -20%;
   right: -10%;
-  background: radial-gradient(circle, rgba(249, 115, 22, 0.05) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(249, 115, 22, 0.12) 0%, transparent 70%);
 }
 
 .hero-float-circle {
   position: absolute;
   border-radius: 50%;
-  border: 1px solid rgba(234, 88, 12, 0.08);
+  border: 1px solid rgba(234, 88, 12, 0.12);
   pointer-events: none;
   z-index: 1;
   animation: float 8s ease-in-out infinite;
@@ -102,7 +102,7 @@
   top: 58%;
   right: 22%;
   animation-delay: 2s;
-  border-color: rgba(249, 115, 22, 0.06);
+  border-color: rgba(249, 115, 22, 0.08);
 }
 
 .hero-float-3 {
@@ -128,10 +128,10 @@
 .hero-badge {
   display: inline-block;
   padding: 6px 18px;
-  border: 1px solid rgba(234, 88, 12, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 20px;
   font-size: 13px;
-  color: var(--primary);
+  color: rgba(255, 255, 255, 0.55);
   margin-bottom: 36px;
   letter-spacing: 0.5px;
 }
@@ -140,7 +140,7 @@
   font-size: 58px;
   font-weight: 800;
   line-height: 1.25;
-  color: var(--text);
+  color: var(--white);
   margin-bottom: 48px;
 }
 
@@ -180,23 +180,23 @@
 }
 
 .label-consumer {
-  background: rgba(234, 88, 12, 0.12);
-  color: #ea580c;
+  background: rgba(234, 88, 12, 0.2);
+  color: #fb923c;
 }
 
 .label-client {
-  background: rgba(249, 115, 22, 0.12);
-  color: #c2410c;
+  background: rgba(249, 115, 22, 0.18);
+  color: #fdba74;
 }
 
 .label-employee {
-  background: rgba(59, 130, 246, 0.12);
-  color: #2563eb;
+  background: rgba(96, 165, 250, 0.15);
+  color: #93c5fd;
 }
 
 .mission-text {
   font-size: 15px;
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.55);
   font-weight: 400;
   letter-spacing: 0.3px;
 }
@@ -207,10 +207,34 @@
   justify-content: center;
 }
 
-.hero-actions .btn-outline {
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-gradient);
+  box-shadow: 0 4px 24px rgba(234, 88, 12, 0.35);
+  padding: 13px 36px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 6px 32px rgba(234, 88, 12, 0.5);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: transparent;
-  color: var(--text);
-  border: 2px solid var(--border);
+  color: rgba(255, 255, 255, 0.85);
+  border: 2px solid rgba(255, 255, 255, 0.2);
   padding: 13px 36px;
   border-radius: 8px;
   font-size: 16px;
@@ -220,9 +244,10 @@
   text-decoration: none;
 }
 
-.hero-actions .btn-outline:hover {
+.btn-outline:hover {
   border-color: var(--primary);
   color: var(--primary);
+  background: rgba(234, 88, 12, 0.1);
 }
 
 @media (max-width: 768px) {

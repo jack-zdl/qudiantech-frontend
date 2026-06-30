@@ -146,7 +146,7 @@ onMounted(async () => {
 <style scoped>
 .page-banner {
   padding: 100px 0 60px;
-  background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+  background: linear-gradient(135deg, #2d1104 0%, #3d1706 100%);
   text-align: center;
   position: relative;
   overflow: hidden;

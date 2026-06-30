@@ -322,7 +322,7 @@ onUnmounted(() => {
 
 <style scoped>
 .global {
-  background: var(--bg-warm);
+  background: var(--dark);
   color: var(--white);
   position: relative;
   overflow: hidden;
