@@ -1,0 +1,1 @@
+import{r as t}from"./request-FfsPIy3H.js";function r(){return t.get("/api/about/timeline")}function u(){return t.get("/api/about/org")}function a(){return t.get("/api/about/culture")}export{u as a,a as b,r as g};
