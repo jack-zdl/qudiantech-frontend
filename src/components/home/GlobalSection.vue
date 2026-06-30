@@ -290,7 +290,7 @@ function getChartOption() {
 async function initChart() {
   if (!mapRef.value) return
   try {
-    const res = await fetch('https://geo.datav.aliyun.com/areas_v3/bound/100000_full.json')
+    const res = await fetch('/china.json')
     const chinaJson = await res.json()
     echarts.registerMap('china', chinaJson as any)
 
