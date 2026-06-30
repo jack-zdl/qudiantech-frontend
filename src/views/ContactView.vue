@@ -36,16 +36,9 @@
             </div>
           </div>
 
-          <!-- 右侧地图占位 -->
+          <!-- 右侧地图 -->
           <div class="contact-map-col">
-            <div class="map-placeholder">
-              <div class="map-inner">
-                <span class="map-icon">📍</span>
-                <p class="map-title">上海总部</p>
-                <p class="map-addr">上海市长宁区通协路 268 号尚品都汇 B807 室</p>
-                <p class="map-hint">地图组件即将接入</p>
-              </div>
-            </div>
+            <div ref="mapContainer" class="map-container"></div>
           </div>
         </div>
       </div>
@@ -54,6 +47,8 @@
 </template>
 
 <script setup lang="ts">
+import { ref, onMounted, onUnmounted } from 'vue'
+
 const contacts = [
   { icon: '📧', label: '邮箱', value: 'contact@qudian.com' },
   { icon: '📞', label: '电话', value: '400-000-0000' },
@@ -69,6 +64,62 @@ const offices = [
   { name: '香港办事处', address: '香港九龙尖沙咀' },
   { name: '俄罗斯办事处', address: '莫斯科' },
 ]
+
+const mapContainer = ref<HTMLDivElement>()
+let mapInstance: any = null
+
+// 上海总部坐标（上海市长宁区通协路 268 号）
+const SHANGHAI_HQ: [number, number] = [31.2185, 121.3595]
+
+onMounted(async () => {
+  if (!mapContainer.value) return
+
+  try {
+    const L = await import('leaflet')
+    await import('leaflet/dist/leaflet.css')
+
+    // 修复 Leaflet 默认图标路径问题（webpack/vite 打包后图标路径失效）
+    // 使用内联 SVG 图标代替默认的 PNG 图标，避免路径问题
+    const iconHtml = L.divIcon({
+      className: 'custom-marker',
+      html: '<div style="background:#ea580c;color:#fff;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;box-shadow:0 2px 8px rgba(234,88,12,0.4);border:3px solid #fff;">📍</div>',
+      iconSize: [32, 32],
+      iconAnchor: [16, 32],
+      popupAnchor: [0, -32],
+    })
+
+    mapInstance = L.map(mapContainer.value, {
+      center: SHANGHAI_HQ,
+      zoom: 15,
+      zoomControl: true,
+      scrollWheelZoom: true,
+    })
+
+    // OSM 瓦片图层（OpenStreetMap，免费无需 API Key）
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      maxZoom: 19,
+    }).addTo(mapInstance)
+
+    // 添加标记
+    const marker = L.marker(SHANGHAI_HQ, { icon: iconHtml }).addTo(mapInstance)
+    marker.bindPopup(
+      '<b>趣电电子商务 · 上海总部</b><br/>上海市长宁区通协路 268 号尚品都汇 B807 室'
+    )
+
+    // 延迟打开弹窗
+    setTimeout(() => marker.openPopup(), 500)
+  } catch (e) {
+    console.error('地图加载失败', e)
+  }
+})
+
+onUnmounted(() => {
+  if (mapInstance) {
+    mapInstance.remove()
+    mapInstance = null
+  }
+})
 </script>
 
 <style scoped>
@@ -227,57 +278,43 @@ const offices = [
   color: var(--text-secondary);
 }
 
-/* 地图占位 */
+/* 地图容器 */
 .contact-map-col {
-  padding: 32px;
+  padding: 0;
   background: var(--bg-light);
   border: 1px solid var(--border);
   border-radius: 12px;
+  overflow: hidden;
 }
 
-.map-placeholder {
+.map-container {
   width: 100%;
   height: 100%;
-  min-height: 350px;
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  min-height: 440px;
 }
 
-.map-inner {
-  text-align: center;
+/* 自定义标记样式(全局) */
+:deep(.custom-marker) {
+  background: none !important;
+  border: none !important;
 }
 
-.map-icon {
-  font-size: 48px;
-  display: block;
-  margin-bottom: 12px;
+:deep(.leaflet-popup-content-wrapper) {
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 1.5;
 }
 
-.map-title {
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--text);
-  margin-bottom: 4px;
-}
-
-.map-addr {
-  font-size: 14px;
-  color: var(--text-secondary);
-  margin-bottom: 8px;
-}
-
-.map-hint {
-  font-size: 12px;
-  color: #94a3b8;
+:deep(.leaflet-popup-content) {
+  margin: 10px 14px;
 }
 
 @media (max-width: 768px) {
   .contact-two-col {
     grid-template-columns: 1fr;
+  }
+  .map-container {
+    min-height: 300px;
   }
 }
 </style>
