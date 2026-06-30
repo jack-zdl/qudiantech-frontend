@@ -20,20 +20,17 @@
         <router-link to="/about" class="btn btn-primary">了解我们</router-link>
         <router-link to="/contact" class="btn btn-outline">合作咨询</router-link>
       </div>
-      <div class="hero-scroll">
-        <span class="scroll-dot"></span>
-      </div>
     </div>
   </section>
 </template>
 
 <style scoped>
 .hero {
-  min-height: 100vh;
+  min-height: 66vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #000;
+  background: linear-gradient(160deg, #0b1020 0%, #131b30 40%, #1a1f3a 100%);
   position: relative;
   overflow: hidden;
 }
@@ -42,8 +39,8 @@
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
   background-size: 60px 60px;
   z-index: 1;
 }
@@ -51,71 +48,71 @@
 .hero-glow {
   position: absolute;
   border-radius: 50%;
-  filter: blur(120px);
+  filter: blur(100px);
   pointer-events: none;
   z-index: 1;
 }
 
 .hero-glow-1 {
-  width: 600px;
-  height: 600px;
-  top: -10%;
-  left: -10%;
-  background: radial-gradient(circle, rgba(225, 29, 72, 0.2) 0%, transparent 70%);
+  width: 500px;
+  height: 500px;
+  top: -15%;
+  left: -8%;
+  background: radial-gradient(circle, rgba(225, 29, 72, 0.18) 0%, transparent 70%);
 }
 
 .hero-glow-2 {
-  width: 500px;
-  height: 500px;
-  bottom: -15%;
-  right: -10%;
-  background: radial-gradient(circle, rgba(249, 115, 22, 0.15) 0%, transparent 70%);
+  width: 400px;
+  height: 400px;
+  bottom: -20%;
+  right: -8%;
+  background: radial-gradient(circle, rgba(249, 115, 22, 0.12) 0%, transparent 70%);
 }
 
 .hero-float-circle {
   position: absolute;
   border-radius: 50%;
-  border: 1px solid rgba(225, 29, 72, 0.15);
+  border: 1px solid rgba(225, 29, 72, 0.12);
   pointer-events: none;
   z-index: 1;
   animation: float 8s ease-in-out infinite;
 }
 
 .hero-float-1 {
-  width: 200px;
-  height: 200px;
-  top: 20%;
-  right: 15%;
+  width: 180px;
+  height: 180px;
+  top: 18%;
+  right: 12%;
   animation-delay: 0s;
 }
 
 .hero-float-2 {
-  width: 120px;
-  height: 120px;
-  top: 60%;
-  right: 25%;
+  width: 100px;
+  height: 100px;
+  top: 55%;
+  right: 22%;
   animation-delay: 2s;
-  border-color: rgba(249, 115, 22, 0.12);
+  border-color: rgba(249, 115, 22, 0.1);
 }
 
 .hero-float-3 {
-  width: 80px;
-  height: 80px;
-  top: 35%;
-  left: 10%;
+  width: 60px;
+  height: 60px;
+  top: 30%;
+  left: 8%;
   animation-delay: 4s;
 }
 
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
+  50% { transform: translateY(-16px); }
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
   text-align: center;
-  padding: 120px 0 80px;
+  padding: 80px 0 60px;
 }
 
 .hero-badge {
@@ -124,17 +121,17 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.6);
-  margin-bottom: 24px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 20px;
   letter-spacing: 0.5px;
 }
 
 .hero-title {
-  font-size: 64px;
+  font-size: 56px;
   font-weight: 800;
   line-height: 1.15;
   color: var(--white);
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .hero-gradient-text {
@@ -145,10 +142,10 @@
 }
 
 .hero-subtitle {
-  font-size: 18px;
-  color: rgba(255, 255, 255, 0.5);
-  max-width: 500px;
-  margin: 0 auto 40px;
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.45);
+  max-width: 480px;
+  margin: 0 auto 32px;
   line-height: 1.8;
 }
 
@@ -177,28 +174,10 @@
   background: rgba(225, 29, 72, 0.08);
 }
 
-.hero-scroll {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.scroll-dot {
-  display: block;
-  width: 6px;
-  height: 6px;
-  background: rgba(225, 29, 72, 0.5);
-  border-radius: 50%;
-  animation: scrollPulse 2s ease-in-out infinite;
-}
-
-@keyframes scrollPulse {
-  0%, 100% { opacity: 0.5; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.5); }
-}
-
 @media (max-width: 768px) {
+  .hero {
+    min-height: 70vh;
+  }
   .hero-title {
     font-size: 36px;
   }
@@ -209,6 +188,9 @@
   .hero-float-2 {
     width: 80px;
     height: 80px;
+  }
+  .hero-content {
+    padding: 60px 0 40px;
   }
 }
 </style>
