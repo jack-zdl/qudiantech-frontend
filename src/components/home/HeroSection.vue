@@ -40,7 +40,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(160deg, #1a0902 0%, #2d1104 40%, #3d1706 100%);
+  background: linear-gradient(160deg, #220c04 0%, #351506 40%, #421c0a 100%);
   position: relative;
   overflow: hidden;
 }
@@ -49,8 +49,8 @@
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(234, 88, 12, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(234, 88, 12, 0.05) 1px, transparent 1px);
+    linear-gradient(rgba(234, 88, 12, 0.06) 2px, transparent 2px),
+    linear-gradient(90deg, rgba(234, 88, 12, 0.06) 2px, transparent 2px);
   background-size: 60px 60px;
   z-index: 1;
 }
